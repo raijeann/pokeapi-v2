@@ -41,13 +41,12 @@ body {
 
 main {
     padding: 2rem;
-    max-width: 900px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
 #searchPokemon {
-    margin: 25px auto 0px auto;
-    padding: 0px 0px 0px 15px;
+    margin: 25px auto 10px auto;
     flex-grow: 1;
     height: 48px;
     border-radius: 30px;
@@ -74,38 +73,6 @@ main {
     gap: 1rem;
 }
 
-.pokemon-image img:hover {
-    transform: scale(1.15);
-    transition: .1s;
-}
-
-.pokemon-id {
-    margin: 10px 15px 0px auto;
-    border-radius: 100vmax;
-    padding: .3rem;
-    font-size: .75rem;
-    font-weight: 550;
-}
-
-.pokemon-types {
-    display: flex;
-    gap: .2rem;
-    font-size: .70rem;
-    font-weight: 500;
-    flex-wrap: wrap;
-    /* justify-content: center; */
-}
-
-.type {
-    padding: 0.1rem .8rem;
-    border-radius: 100vmax;
-}
-
-.pokemon-name {
-    padding-bottom: 7px;
-    font-size: 1.35rem;
-}
-
 .pokemon {
     display: flex;
     flex-direction: column;
@@ -119,17 +86,21 @@ main {
     overflow: hidden;
 }
 
-.all-pokemon {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
+.pokemon-id {
+    margin: 10px 15px auto auto;
+    padding: .3rem;
+    font-size: .75rem;
+    font-weight: 500;
+}
+
+.pokemon-image img:hover {
+    transform: scale(1.15);
+    transition: .1s;
 }
 
 .pokemon-info {
     padding: 10px;
     background-color: #ECECEC;
-    /* display: flex; */
-    /* flex-direction: column; */
     grid-template-columns: auto auto auto;
     gap: .2rem;
     padding-inline: 1rem;
@@ -137,19 +108,21 @@ main {
     text-align: center;
 }
 
-.midsection {
+.pokemon-name {
+    padding-bottom: 7px;
+    font-size: 1.35rem;
 }
 
-.first-section {
-    grid-column: 1;
-    /* background-color: red; */
-    padding: 0px 25px;
+.pokemon-types {
+    display: flex;
+    gap: .2rem;
+    font-size: .70rem;
+    font-weight: 500;
 }
 
-.second-section {
-    grid: 3;
-    background-color: rebeccapurple;
-    padding: 0px 25px;
+.type {
+    padding: 0.1rem .8rem;
+    border-radius: 100vmax;
 }
 
 @media screen and (min-width: 430px) {

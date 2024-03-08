@@ -22,7 +22,8 @@ console.log(pokemonList);
 console.log(pokemonList.length);
 
 function showPokemon(pokemon) {
-    let types = pokemon.types.map(type => `<p class="${type.type.name} type">${type.type.name}<p/>`);
+    let types = pokemon.types.map(type => 
+        `<p class="${type.type.name} type">${type.type.name}<p/>`);
     types = types.join('');
 
     // let height = parseFloat(pokemon.height) / 10;
@@ -44,17 +45,15 @@ function showPokemon(pokemon) {
                 <img src=${pokemon.sprites.front_default} alt=${pokemon.name} class="center">
             <div/>
         <div/>
-        <div class="pokemon-info">
-            <div class="first-section"><div/>
-            <div class="mid-section">
+        <div class="pokemon">
+            <div class="pokemon-info">
                 <div class="container-name">
-                    <h2 class="pokemon-name">${pokemon.name}<h2/>
+                    <p class="pokemon-name">${pokemon.name}<p/>
                 <div/>
                 <div class="pokemon-types">
                     ${types}
                 <div/>
             <div/>
-            <div class="second-section"><div/>
         <div/>`;
         listPokemon.append(div);
 }
@@ -63,7 +62,7 @@ function filterCard() {
     const input = document.getElementById('searchPokemon').value.toLowerCase();
     const cards = document.getElementsByClassName('pokemon');
     for(let card of cards) {
-        const title = pokemon.querySelector('h2').textContent.toLowerCase();
+        const title = pokemon.querySelector('p').textContent.toLowerCase();
 
         if(title.includes(input)) {
             card.style.display = 'block';
